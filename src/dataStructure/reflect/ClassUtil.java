@@ -1,4 +1,4 @@
-package reflect;
+package dataStructure.reflect;
 
 import java.lang.reflect.Method;
 

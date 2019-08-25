@@ -1,6 +1,4 @@
-package reflect.demoClass;
-
-import reflect.demoClass.Animal;
+package dataStructure.reflect.demoClass;
 
 public class Dog extends Animal {
     public void dog() {
