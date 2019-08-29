@@ -1,6 +1,6 @@
-package dataStructure.reflect;
+package java.reflect;
 
-import dataStructure.reflect.demoClass.Dog;
+import java.reflect.demoClass.Dog;
 
 import java.lang.reflect.Method;
 

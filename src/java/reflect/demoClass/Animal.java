@@ -1,4 +1,4 @@
-package dataStructure.reflect.demoClass;
+package java.reflect.demoClass;
 
 public class Animal {
     private int age;

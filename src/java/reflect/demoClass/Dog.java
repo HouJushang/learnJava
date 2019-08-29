@@ -1,4 +1,4 @@
-package dataStructure.reflect.demoClass;
+package java.reflect.demoClass;
 
 public class Dog extends Animal {
     public void dog() {
