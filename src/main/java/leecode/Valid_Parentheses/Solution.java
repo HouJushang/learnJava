@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 class Solution {
     public boolean isValid(String s) {
-        ArrayList<Character> stackSting = new ArrayList<>();
+        ArrayList<Character> stackSting = new ArrayList<Character>();
         String leftStr = "[{(";
         String righttStr = "]})";
         Boolean errBreak = false;
