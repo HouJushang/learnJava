@@ -1,4 +1,4 @@
-package book.datastructure.bag.test;
+package datastructure.bag.test;
 
 public class Item
 {

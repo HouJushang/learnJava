@@ -1,7 +1,7 @@
-package book.datastructure.bag.test;
+package datastructure.bag.test;
 
-import book.datastructure.bag.src.ArrayBag;
-import book.datastructure.bag.src.IBag;
+import datastructure.bag.src.ArrayBag;
+import datastructure.bag.src.IBag;
 
 public class Test {
     public static void main(String[] args) {

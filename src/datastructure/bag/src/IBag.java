@@ -1,11 +1,11 @@
-package book.datastructure.bag.src;
+package datastructure.bag.src;
 
 public interface IBag<T> {
-    int getSize();
+    int getCurrentSize();
 
     boolean isEmpty();
 
-    void add(T t);
+    Boolean add(T newEntry);
 
     T remove();
 
