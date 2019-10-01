@@ -9,7 +9,7 @@ public interface IBag<T> {
 
     T remove();
 
-    T remove(T t);
+    Boolean remove(T t);
 
     void clear();
 

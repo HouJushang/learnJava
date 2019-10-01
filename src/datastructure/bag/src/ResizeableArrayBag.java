@@ -70,12 +70,13 @@ public final class ResizeableArrayBag<T> implements IBag<T> {
     }
 
     @Override
-    public T remove(T entry) {
+    public Boolean remove(T entry) {
         int entryIndex = getIndexOf(entry);
         if(entryIndex > -1){
-            return this.removeEntry(entryIndex);
+            this.removeEntry(entryIndex);
+            return true;
         }else {
-            return null;
+            return false;
         }
     }
 

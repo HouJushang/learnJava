@@ -1,4 +1,4 @@
-package datastructure.bag;
+package datastructure.bag.test;
 
 import datastructure.bag.src.ArrayBag;
 import datastructure.bag.src.IBag;
