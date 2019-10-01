@@ -39,6 +39,7 @@ public class ArrayStack<T> implements IStack<T> {
             throw new EmptyStackException();
         T result = stack[topIndex - 1];
         stack[topIndex] = null;
+        topIndex --;
         return result;
     }
 
@@ -60,7 +61,7 @@ public class ArrayStack<T> implements IStack<T> {
 
     @Override
     public boolean isEmpty() {
-        return topIndex == 0;
+        return topIndex <= 0;
     }
 
 
