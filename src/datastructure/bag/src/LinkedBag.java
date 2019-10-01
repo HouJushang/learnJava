@@ -17,7 +17,7 @@ public class LinkedBag<T> implements IBag<T> {
 
     @Override
     public int getCurrentSize() {
-        return 0;
+        return numberOfEntries;
     }
 
     @Override
@@ -39,6 +39,7 @@ public class LinkedBag<T> implements IBag<T> {
         if(firstNode != null){
             result = firstNode.data;
             firstNode = firstNode.next;
+            numberOfEntries--;
         }
 
         return result;
@@ -51,6 +52,7 @@ public class LinkedBag<T> implements IBag<T> {
         if(resultNode != null){
             resultNode.data = firstNode.data;
             firstNode = firstNode.next;
+            numberOfEntries--;
             return true;
         }else{
             return false;
@@ -59,8 +61,9 @@ public class LinkedBag<T> implements IBag<T> {
 
     @Override
     public void clear() {
-        while (!isEmpty())
-            remove();
+        firstNode = null;
+//        while (!isEmpty())
+//            remove();
     }
 
     @Override
@@ -83,20 +86,7 @@ public class LinkedBag<T> implements IBag<T> {
 
     @Override
     public boolean contains(T entry) {
-        boolean found = false;
-        int currentIndex = 0;
-        Node currentNode = firstNode;
-
-        while (currentNode != null && currentIndex < numberOfEntries && !found){
-
-            if(currentNode.data.equals(entry)) found = true;
-
-            currentNode = currentNode.next;
-            currentIndex++;
-
-        }
-
-        return found;
+        return getReferenceTo(entry) != null;
     }
 
     @Override
@@ -115,7 +105,6 @@ public class LinkedBag<T> implements IBag<T> {
     }
 
     private Node getReferenceTo(T anEntry){
-        Node result = null;
         Node currentNode = firstNode;
         boolean found = false;
 
