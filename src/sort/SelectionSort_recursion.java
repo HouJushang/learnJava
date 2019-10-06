@@ -1,4 +1,4 @@
-package book.sort;
+package sort;
 
 public class SelectionSort_recursion {
     public static <T extends Comparable> T[] sortFn(T[] arr) {
