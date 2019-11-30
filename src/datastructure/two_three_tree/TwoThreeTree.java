@@ -1,30 +1,22 @@
 package datastructure.two_three_tree;
 
 public class TwoThreeTree <T extends Comparable>{
+    Node root;
+    int size;
     private class Node {
-        T value1;
-        T value2;
-        Node left;
-        Node middle;
-        Node right;
+        T[] children;
         Node parent;
 
         public Node() {
-        }
-
-        public Node(T value1) {
-            this.value1 = value1;
+            this.children = (T[])new Object[4];
         }
     }
-    int size;
-    Node node;
+
 
     public void add(T item){
-        if(this.node == null){
-            this.node = new Node();
-            this.node.value1 = item;
+        if(this.root == null){
+            this.root = new Node();
         }else{
-            add(this.node, item);
         }
     }
 

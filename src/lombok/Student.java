@@ -5,5 +5,5 @@
 //@NoArgsConstructor
 //public class Student {
 //    private Integer id;
-//    private String Name;
+//    private CookBookString Name;
 //}

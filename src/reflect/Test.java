@@ -5,7 +5,7 @@
 //import java.lang.reflect.Method;
 //
 //public class Test {
-//    public static void main(String[] args) {
+//    public static void main(CookBookString[] args) {
 //        Dog dog = new Dog();
 //        Method[] dogMethod = ClassUtil.getObjPublicMethod(dog);
 //        Method[] dogMethod2 = ClassUtil.getObjPublicMethod(dog);

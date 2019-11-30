@@ -21,7 +21,6 @@ public class ArrayList<T> implements  IList<T>{
         this.list = (T[]) new Object[size];
     }
 
-    @Override
     public void add(T entry) {
         list[numberOfEntries++] = entry;
         if(isArrayFull()) {
@@ -29,7 +28,6 @@ public class ArrayList<T> implements  IList<T>{
         }
     }
 
-    @Override
     public void add(int index, T entry) {
         if(checkIndex(index))
             throw new Error("add error");
@@ -37,7 +35,6 @@ public class ArrayList<T> implements  IList<T>{
         list[index] = entry;
     }
 
-    @Override
     public void remove(int index) {
         if(checkIndex(index))
             throw new Error("remove error");
@@ -47,21 +44,18 @@ public class ArrayList<T> implements  IList<T>{
         numberOfEntries--;
     }
 
-    @Override
     public void set(int index, T entry) {
         if(checkIndex(index))
             throw new Error("set error");
         list[index] = entry;
     }
 
-    @Override
     public T get(int index) {
         if(checkIndex(index))
             throw new Error("get error");
         return list[index];
     }
 
-    @Override
     public boolean contains(Object entry) {
         boolean found = false;
         int currentIndex = 0;
@@ -71,17 +65,14 @@ public class ArrayList<T> implements  IList<T>{
         return found;
     }
 
-    @Override
     public int size() {
         return numberOfEntries;
     }
 
-    @Override
     public boolean isEmpty() {
         return numberOfEntries == 0;
     }
 
-    @Override
     public T[] toArray() {
         T[] result = (T[]) new Object[this.numberOfEntries];
         for (int i = 0; i < result.length; i++) {
