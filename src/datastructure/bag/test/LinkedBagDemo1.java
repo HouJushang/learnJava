@@ -30,7 +30,7 @@ public class LinkedBagDemo1 {
     }
 
     private static void dispalyBag(IBag<String> aBag) {
-        System.out.println("The bag contains the following string(s)");
+        System.out.println("The bag contains the following CookBookString(s)");
         Object[] bagArray = aBag.toArray();
         for (int i = 0; i < bagArray.length; i++) {
             System.out.print(bagArray[i] + " ");
