@@ -21,17 +21,14 @@ public final class ResizeableArrayBag<T> implements IBag<T> {
         initialized = true;
     }
 
-    @Override
     public int getCurrentSize() {
         return numberOfEntries;
     }
 
-    @Override
     public boolean isEmpty() {
         return numberOfEntries == 0;
     }
 
-    @Override
     public Boolean add(Object o) {
         checkIniaitlized();
         if(this.isArrayFull()){
@@ -49,7 +46,6 @@ public final class ResizeableArrayBag<T> implements IBag<T> {
         bag = Arrays.copyOf(bag, newCapacity);
     }
 
-    @Override
     public T[] toArray() {
         T[] result = (T[]) new Object[this.numberOfEntries];
         for (int i = 0; i < result.length; i++) {
@@ -59,7 +55,6 @@ public final class ResizeableArrayBag<T> implements IBag<T> {
     }
 
 
-    @Override
     public T remove() {
         checkIniaitlized();
         T result = null;
@@ -69,7 +64,6 @@ public final class ResizeableArrayBag<T> implements IBag<T> {
         return result;
     }
 
-    @Override
     public Boolean remove(T entry) {
         int entryIndex = getIndexOf(entry);
         if(entryIndex > -1){
@@ -80,14 +74,12 @@ public final class ResizeableArrayBag<T> implements IBag<T> {
         }
     }
 
-    @Override
     public void clear() {
         while (!isEmpty()){
             remove();
         }
     }
 
-    @Override
     public int getFrequencyOf(T entry) {
         checkIniaitlized();
         int counter = 0;
@@ -99,7 +91,6 @@ public final class ResizeableArrayBag<T> implements IBag<T> {
         return counter;
     }
 
-    @Override
     public boolean contains(T entry) {
         checkIniaitlized();
         return getIndexOf(entry) > -1;
