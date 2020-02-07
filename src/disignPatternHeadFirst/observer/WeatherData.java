@@ -6,6 +6,8 @@ import java.util.ArrayList;
 public class WeatherData implements Subject {
     private ArrayList<Observer> observers = new ArrayList<>();
 
+    private int temperature;
+
     @Override
     public void registerObserver(Observer o) {
         observers.add(o);
@@ -25,6 +27,7 @@ public class WeatherData implements Subject {
     }
 
     public void measurementsChanged(int temperature){
+        this.temperature = temperature;
         this.notifyObservers(temperature);
     }
 }
